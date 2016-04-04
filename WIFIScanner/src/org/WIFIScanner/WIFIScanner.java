@@ -101,9 +101,9 @@ public class WIFIScanner extends Activity implements OnClickListener {
 		Log.d(TAG, "Setup WIfiManager getSystemService");
 
 		// if WIFIEnabled
-		if (wifimanager.isWifiEnabled() == false)
+		if (wifimanager.isWifiEnabled() == false){
 			wifimanager.setWifiEnabled(true);
-
+		}
 	}
 
 	public void printToast(String messageToast) {
