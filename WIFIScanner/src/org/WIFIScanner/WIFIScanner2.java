@@ -59,14 +59,11 @@ public class WIFIScanner extends Activity implements OnClickListener {
 		mScanResult = wifimanager.getScanResults(); // ScanResult
 		// Scan count
 		textStatus.setText("Scan count is \t" + ++scanCount + " times \n");
-
-		textStatus.append("=======================================\n");
 		for (int i = 0; i < mScanResult.size(); i++) {
 			ScanResult result = mScanResult.get(i);
 			textStatus.append((i + 1) + ". SSID : " + result.SSID.toString()
 					+ "\t\t RSSI : " + result.level + " dBm\n");
 		}
-		textStatus.append("=======================================\n");
 	}
 
 	public void initWIFIScan() {
